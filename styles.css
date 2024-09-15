@@ -1,0 +1,84 @@
+/* General styling */
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('BG.gif') no-repeat center center;
+    background-size: cover; /* Ensures the background covers the whole page */
+}
+
+/* Container to center the content */
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0); /* Fully opaque background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Typing effect text with white font and black outline */
+h1 {
+    font-size: 3rem;
+    white-space: nowrap;
+    border-right: 2px solid;
+    width: fit-content;
+    margin: 0 auto;
+    overflow: hidden;
+    color: white; /* White text */
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+         -1px  1px 0 #000,
+          1px  1px 0 #000; /* Black outline */
+}
+
+/* Button styling */
+#redirect-btn, #redirect-btn-1, #redirect-btn-2, #redirect-btn-3, #redirect-btn-4 {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    color: white; /* Button text color */
+    background-color: green; /* Button background fill */
+    border: 2px solid green;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.5s ease-in-out;
+    margin: 10px;
+}
+
+/* Button hover effect with scale tween */
+#redirect-btn:hover, #redirect-btn-1:hover, #redirect-btn-2:hover, #redirect-btn-3:hover, #redirect-btn-4:hover {
+    transform: scale(1.1);
+}
+
+/* Hidden class to initially hide the buttons */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Make buttons visible once typing finishes */
+.fade-in {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Flex container for buttons */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Video container hidden by default */
+#video-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#video-container.show {
+    display: flex;
+}
